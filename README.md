@@ -20,8 +20,22 @@ You will find below some usefull links.
 By default XWiki ships with an embedded Solr. 
 This is mostly for ease of use but the embedded instance is not really recommended by the Solr team so you might want to externalize it when starting to have a wiki with a lots of pages. Solr is using a lot of memory and a standalone Solr instance is generally better in term of speed than the embedded one. It should not be much noticeable in a small wiki but if you find yourself starting to have memory issues and slow search results you should probably try to install and setup an external instance of Solr using the guide.
 
-## How to delete the volumes
+## More about volumes
+
+### How to list the volumes
+
+```bash 
+docker volume ls
+```
+
+### How to delete the volumes after having tested postgres configuration
 
 ```bash 
 docker volume rm docker-xwiki_postgres-data docker-xwiki_xwiki-data
+```
+
+### How to delete the volumes after having tested mysql configuration
+
+```bash 
+docker volume rm docker-xwiki_mariadb-data docker-xwiki_xwiki-data
 ```
