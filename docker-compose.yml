@@ -1,0 +1,10 @@
+
+# version is obsolete (v2 is the default)
+
+networks:
+  xwiki-bridge:
+    driver: bridge
+
+include:
+  - compose/xwiki-postgres.yml
+
